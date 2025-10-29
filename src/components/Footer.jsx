@@ -1,4 +1,4 @@
-
+// Footer page for Home page ?|V|
 import { FaFacebookF, FaInstagram, } from 'react-icons/fa';
 export default function Footer() {
   return (
@@ -7,7 +7,8 @@ export default function Footer() {
         <div className="grid grid-cols-1 md:grid-cols-4 gap-8 mb-8">
           {/* Quick Links Section */}
           <div>
-            <h3 className="font-bold text-gray-800 mb-4">Quick Links</h3>
+            <h3 className="font-bold text-gray-800 mb-4">Quick Links</h3> 
+            {/* Quick links section using hover |V| */}
             <ul className="space-y-2">
               <li><a href="#" className="text-gray-600 hover:text-green-600 transition-colors">Know More About Us</a></li>
               <li><a href="#" className="text-gray-600 hover:text-green-600 transition-colors">Visit Store</a></li>
@@ -18,6 +19,7 @@ export default function Footer() {
 
           {/* Policies Section */}
           <div>
+          {/* Policies Section section using hover |V| */}
             <h3 className="font-bold text-gray-800 mb-4">Policies</h3>
             <ul className="space-y-2">
               <li><a href="#" className="text-gray-600 hover:text-green-600 transition-colors">Refund Policy</a></li>
@@ -27,6 +29,8 @@ export default function Footer() {
 
           {/* Social Media Section */}
           <div>
+            {/* Social media section using hover |V| */}
+
             <h3 className="font-bold text-gray-800 mb-4">Follow Us</h3>
             <div className="flex space-x-4">
               <a href="" className="bg-gray-200 p-2 rounded-full hover:bg-green-500 hover:text-white transition-colors">
@@ -39,7 +43,7 @@ export default function Footer() {
             </div>
           </div>
 
-          {/* Newsletter Section */}
+          {/* Newsletter Section|V| */}
           <div>
             <h3 className="font-bold text-gray-800 mb-4">Newsletter</h3>
             <p className="text-gray-600 text-sm mb-3">Subscribe for updates</p>
@@ -49,6 +53,7 @@ export default function Footer() {
                 placeholder="Your email" 
                 className="flex-1 px-3 py-2 border border-gray-300 rounded-l-lg focus:outline-none focus:ring-2 focus:ring-green-500"
               />
+              {/*Placing the placeholder for the input of the email for our newsletter|V|  */}
               <button className="bg-green-600 text-white px-4 py-2 rounded-r-lg hover:bg-green-700 transition-colors">
                 Subscribe
               </button>
@@ -62,7 +67,8 @@ export default function Footer() {
             Taste the health in every bite!!
           </h2>
           <p className="text-gray-600">
-            Copyright © {new Date().getFullYear()} | Delightico
+            Copyright © {new Date().getFullYear()} | Delightico 
+            {/*The date of the year will be printed automatically |V|  */}
           </p>
         </div>
       </div>
