@@ -1,3 +1,5 @@
+//this page is used for protecting the admin database|V|
+// it will not allow any ranodom access
 import { Navigate } from "react-router-dom";
 import  useAuth  from "../hooks/useAuth";
 
