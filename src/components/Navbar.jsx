@@ -2,15 +2,15 @@ import { useState } from "react";
 import { Link, useNavigate } from "react-router-dom";
 import { ShoppingCart, User } from "lucide-react";
 import useAuth from "../hooks/useAuth";
-import logo2 from "../assets/logo2.png";
+import logo2 from "../assets/logo2.png"; //Deligtico logo |V|
 import About from "../pages/About";
 
 const Navbar = () => {
-  const { user, logout } = useAuth(); // from AuthContext
+  const { user, logout } = useAuth(); // from AuthContext |V|
   const [dropdownOpen, setDropdownOpen] = useState(false);
   const navigate = useNavigate();
 
-  // Dummy cart values (replace with context/API later)
+  // Dummy cart values set to 0 for now |V|
   const cartCount = 0;
   const cartTotal = 0;
 
@@ -22,7 +22,7 @@ const Navbar = () => {
 
   return (
     <nav className="bg-amber-50 shadow-md flex justify-between items-center mt-5 p-0">
-      {/* Left: Logo */}
+      {/*  left logo of delightico |V| */}
       <Link to="/" className="flex items-center space-x-2">
         <img
           src={logo2} 
@@ -30,8 +30,9 @@ const Navbar = () => {
           className="h-14 w-30"
         />
       </Link>
+      
 
-      {/* Right: Menu */}
+      {/* Right menu starting under which 1.cart,2.Profile, and also dropdown menu which contains login and register about and contact|V|*/}
       <div className="flex items-center space-x-6 relative">
         <Link to="/about" className="text-gray-700 hover:text-green-700">
          About
@@ -56,7 +57,7 @@ const Navbar = () => {
         {/* Profile */}
         <div className="relative">
           <button
-            onClick={() => setDropdownOpen((prev) => !prev)}
+            onClick={() => setDropdownOpen((prev) => !prev)} //initiate the dropdown menu|V|
             className="flex items-center"
           >
             <User className="w-6 h-6 text-green-700" />
@@ -65,7 +66,7 @@ const Navbar = () => {
           {/* Dropdown */}
           {dropdownOpen && (
             <div className="absolute right-0 mt-2 w-40 bg-white shadow-lg rounded-lg py-2 border z-50">
-              {user ? (
+              {user ? ( //if login is there then profile, orders and logout option will be there|V|
                 <>
                   <Link
                     to="/profile"
@@ -88,7 +89,7 @@ const Navbar = () => {
                     Logout
                   </button>
                 </>
-              ) : (
+              ) : ( //If login is not done then only register and login will be there|V|
                 <>
                   <Link
                     to="/login"
@@ -113,5 +114,4 @@ const Navbar = () => {
     </nav>
   );
 };
-
 export default Navbar;
