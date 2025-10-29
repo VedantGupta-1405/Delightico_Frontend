@@ -1,4 +1,4 @@
-import { useState, useEffect } from 'react';
+import { useState, useEffect } from 'react'; //Issus in the about page - not visible in the frontend//
 import { FaLeaf, FaRecycle, FaHeart, FaStar, FaShoppingBag } from 'react-icons/fa';
 
 export default function About() {
