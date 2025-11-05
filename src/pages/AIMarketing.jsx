@@ -6,7 +6,7 @@ export default function AIMarketing() {
   const [description, setDescription] = useState("");
   const [posts, setPosts] = useState(null);
   const [loading, setLoading] = useState(false);
-
+//form submission present|V|
   const handleGenerate = async (e) => {
     e.preventDefault();
     setLoading(true);
@@ -46,7 +46,7 @@ export default function AIMarketing() {
           {loading ? "Generating..." : "Generate Posts"}
         </button>
       </form>
-
+{/*Displaying the results|V|  */}
       {posts && (
         <div className="mt-6">
           <h2 className="text-xl font-semibold mb-2">Generated Content</h2>
