@@ -8,13 +8,13 @@ export default function Checkout() {
   const [cart, setCart] = useState([]);
   const [loading, setLoading] = useState(false);
 
-  useEffect(() => {
+  useEffect(() => {//Fetching the cart data|V|
     if (user) {
       getCart().then(setCart).catch(console.error);
     }
   }, [user]);
 
-  const handleCheckout = async () => {
+  const handleCheckout = async () => {//Handles the checkout for the user |V|
     setLoading(true);
     try {
       await checkout();
