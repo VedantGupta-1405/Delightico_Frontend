@@ -4,7 +4,7 @@ import { loginUser } from "../services/auth";
 import useAuth from "../hooks/useAuth";  
 
 
-export default function Login() {
+export default function Login() { //initialising the const functions for the login page |V|
   const [email, setEmail] = useState("");
   const [password, setPassword] = useState("");
   const [error, setError] = useState("");
@@ -28,7 +28,7 @@ export default function Login() {
       {error && <p className="text-red-500 mb-2">{error}</p>}
       <form onSubmit={handleSubmit} className="space-y-4">
         <input
-          type="email"
+          type="email" //email login part |V|
           placeholder="Email"
           value={email}
           onChange={(e) => setEmail(e.target.value)}
@@ -36,7 +36,7 @@ export default function Login() {
           required
         />
         <input
-          type="password"
+          type="password" //password login part |V|
           placeholder="Password"
           value={password}
           onChange={(e) => setPassword(e.target.value)}
