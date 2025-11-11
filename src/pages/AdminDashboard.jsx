@@ -5,7 +5,7 @@ import AdminSidebar from "../components/AdminSidebar";
 export default function AdminDashboard() {
   const [products, setProducts] = useState([]);
   const [form, setForm] = useState({ name: "", price: "", image: "", description: "" });
-
+//fetching the products on the load |V|
   useEffect(() => {
     getProducts().then(setProducts).catch(console.error);
   }, []);
@@ -16,13 +16,13 @@ export default function AdminDashboard() {
     setProducts([...products, newProduct]);
     setForm({ name: "", price: "", image: "", description: "" });
   };
-
+//delete product handler|V|
   const handleDelete = async (id) => {
     await deleteProduct(id);
     setProducts(products.filter((p) => p._id !== id));
   };
 
-  return (
+  return ( //UI list |V|
     <div className="flex">
       <AdminSidebar />
       <div className="flex-grow p-6">
@@ -63,7 +63,7 @@ export default function AdminDashboard() {
             Add Product
           </button>
         </form>
-
+        {/*Product list is made down below|V|  */}
         {/* Products List */}
         <h2 className="text-xl font-semibold mb-2">All Products</h2>
         <ul>
