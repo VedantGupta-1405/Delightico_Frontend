@@ -12,7 +12,7 @@ import hurihittu from "../assets/hurihittu.png";
 import teabag from "../assets/teabag.png";
 
 const Home = () => {
-  // Sample product data - replace with your actual products
+  // Sample product data - replace with your actual products |V|
   const trendingProducts = [
     {
       id: 1,
