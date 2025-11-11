@@ -1,5 +1,5 @@
 import { useState, useEffect } from "react";
-import useAuth from "../hooks/useAuth";  // ✅ default import
+import useAuth from "../hooks/useAuth";  //It is the default import |V|
 
 import { getCart, updateCart, removeFromCart } from "../services/order";
 import { Link } from "react-router-dom";
@@ -60,7 +60,7 @@ export default function Cart() {
               </div>
             </div>
           ))}
-
+          {/*Cart Total and checkout*/}
           <div className="mt-6 flex justify-between">
             <p className="font-bold">
               Total: $
